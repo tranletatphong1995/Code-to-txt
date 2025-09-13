@@ -1,0 +1,5 @@
+{
+  "name": "Code to PDF Packager",
+  "description": "A tool to package an entire source code directory into a single, well-structured PDF file, with options to exclude files and folders like node_modules.",
+  "requestFramePermissions": []
+}
