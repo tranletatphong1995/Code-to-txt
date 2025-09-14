@@ -19,5 +19,8 @@ export const generateTxtBlob = (files: ProjectFile[], projectName: string): Blob
 
     const fullContent = header + contentParts.join('\n\n\n');
     
-    return new Blob([fullContent], { type: 'text/plain;charset=utf-8' });
+    // Prepend a UTF-8 Byte Order Mark (BOM) to ensure correct character display in various text editors.
+    const bom = '\uFEFF';
+    
+    return new Blob([bom + fullContent], { type: 'text/plain;charset=utf-8' });
 };
